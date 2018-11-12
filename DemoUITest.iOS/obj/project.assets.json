@@ -770,11 +770,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jccoin/Documents/UITest/DemoUITest/DemoUITest.iOS/DemoUITest.iOS.csproj",
+      "projectUniqueName": "/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest.iOS/DemoUITest.iOS.csproj",
       "projectName": "DemoUITest.iOS",
-      "projectPath": "/Users/jccoin/Documents/UITest/DemoUITest/DemoUITest.iOS/DemoUITest.iOS.csproj",
+      "projectPath": "/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest.iOS/DemoUITest.iOS.csproj",
       "packagesPath": "/Users/jccoin/.nuget/packages/",
-      "outputPath": "/Users/jccoin/Documents/UITest/DemoUITest/DemoUITest.iOS/obj",
+      "outputPath": "/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest.iOS/obj",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/jccoin/.config/NuGet/NuGet.Config"
@@ -789,8 +789,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "/Users/jccoin/Documents/UITest/DemoUITest/DemoUITest/DemoUITest.csproj": {
-              "projectPath": "/Users/jccoin/Documents/UITest/DemoUITest/DemoUITest/DemoUITest.csproj"
+            "/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/DemoUITest.csproj": {
+              "projectPath": "/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/DemoUITest.csproj"
             }
           }
         }

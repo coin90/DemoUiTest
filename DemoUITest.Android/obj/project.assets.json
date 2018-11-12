@@ -766,11 +766,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jccoin/Documents/UITest/DemoUITest/DemoUITest.Android/DemoUITest.Android.csproj",
+      "projectUniqueName": "/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest.Android/DemoUITest.Android.csproj",
       "projectName": "DemoUITest.Android",
-      "projectPath": "/Users/jccoin/Documents/UITest/DemoUITest/DemoUITest.Android/DemoUITest.Android.csproj",
+      "projectPath": "/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest.Android/DemoUITest.Android.csproj",
       "packagesPath": "/Users/jccoin/.nuget/packages/",
-      "outputPath": "/Users/jccoin/Documents/UITest/DemoUITest/DemoUITest.Android/obj",
+      "outputPath": "/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest.Android/obj",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/jccoin/.config/NuGet/NuGet.Config"
@@ -785,8 +785,8 @@
       "frameworks": {
         "monoandroid81": {
           "projectReferences": {
-            "/Users/jccoin/Documents/UITest/DemoUITest/DemoUITest/DemoUITest.csproj": {
-              "projectPath": "/Users/jccoin/Documents/UITest/DemoUITest/DemoUITest/DemoUITest.csproj"
+            "/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/DemoUITest.csproj": {
+              "projectPath": "/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/DemoUITest.csproj"
             }
           }
         }

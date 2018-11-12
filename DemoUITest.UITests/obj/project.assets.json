@@ -126,11 +126,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jccoin/Documents/UITest/DemoUITest/DemoUITest.UITests/DemoUITest.UITests.csproj",
+      "projectUniqueName": "/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest.UITests/DemoUITest.UITests.csproj",
       "projectName": "DemoUITest.UITests",
-      "projectPath": "/Users/jccoin/Documents/UITest/DemoUITest/DemoUITest.UITests/DemoUITest.UITests.csproj",
+      "projectPath": "/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest.UITests/DemoUITest.UITests.csproj",
       "packagesPath": "/Users/jccoin/.nuget/packages/",
-      "outputPath": "/Users/jccoin/Documents/UITest/DemoUITest/DemoUITest.UITests/obj",
+      "outputPath": "/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest.UITests/obj",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/jccoin/.config/NuGet/NuGet.Config"

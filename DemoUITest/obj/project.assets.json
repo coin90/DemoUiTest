@@ -351,11 +351,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jccoin/Documents/UITest/DemoUITest/DemoUITest/DemoUITest.csproj",
+      "projectUniqueName": "/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/DemoUITest.csproj",
       "projectName": "DemoUITest",
-      "projectPath": "/Users/jccoin/Documents/UITest/DemoUITest/DemoUITest/DemoUITest.csproj",
+      "projectPath": "/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/DemoUITest.csproj",
       "packagesPath": "/Users/jccoin/.nuget/packages/",
-      "outputPath": "/Users/jccoin/Documents/UITest/DemoUITest/DemoUITest/obj",
+      "outputPath": "/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
