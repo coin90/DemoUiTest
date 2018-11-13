@@ -1,14 +1,11 @@
-﻿using System;
-
+﻿
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
-using DemoUITest.Models;
 using DemoUITest.ViewModels;
 
 namespace DemoUITest.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+
     public partial class ItemDetailPage : ContentPage
     {
         ItemDetailViewModel viewModel;
@@ -23,15 +20,6 @@ namespace DemoUITest.Views
         public ItemDetailPage()
         {
             InitializeComponent();
-
-            var item = new Item
-            {
-                Text = "Item 1",
-                Description = "This is an item description."
-            };
-
-            viewModel = new ItemDetailViewModel(item);
-            BindingContext = viewModel;
         }
     }
 }

@@ -1,12 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DemoUITest.Views.LoginPage">
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="DemoUITest.Views.LoginPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="{StaticResource PrimaryDark}">
     <ContentPage.Content>
-        <StackLayout Spacing="20" Padding="15">
-            <Label Text="User" FontSize="Medium" />
-            <Entry Text="{Binding User}" FontSize="Small" />
-            <Label Text="Pass" FontSize="Medium" />
-            <Editor Text="{Binding Pass}" FontSize="Small" Margin="0" />
-            <Button Text="Login" Clicked="Login_Clicked" />
-        </StackLayout>
+            <Frame
+                Margin="15,30"
+                VerticalOptions="Start"
+                BackgroundColor="{StaticResource Gray}"
+                CornerRadius="20"
+            OutlineColor="{StaticResource Gray}">
+                <StackLayout Padding="15,20">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        Text="User"
+                        TextColor="{StaticResource Black}" />
+                    <Entry
+                        FontSize="Small"
+                        Text="{Binding User}"
+                        BackgroundColor="White"/>
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="Medium"
+                        Text="Pass"
+                        TextColor="{StaticResource Black}" />
+                    <Entry
+                        Margin="0"
+                        FontSize="Small"
+                        IsPassword="true"
+                        Text="{Binding Pass}"
+                        BackgroundColor="White"/>
+                    <Button
+                        Margin="0,20,0,0"
+                        BackgroundColor="{StaticResource PrimaryDark}"
+                        Clicked="Login_Clicked"
+                        Text="Login"
+                        TextColor="{StaticResource Gray}" />
+                </StackLayout>
+
+            </Frame>
     </ContentPage.Content>
 </ContentPage>

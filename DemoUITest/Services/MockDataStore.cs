@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
-
 using DemoUITest.Models;
 
-[assembly: Xamarin.Forms.Dependency(typeof(DemoUITest.Services.MockDataStore))]
 namespace DemoUITest.Services
 {
-    public class MockDataStore : IDataStore<Item>
+    public class MockDataStore : IDataStore<Character>
     {
-        List<Item> items;
+        List<Character> items;
 
         public MockDataStore()
         {
-            items = new List<Item>();
-            var mockItems = new List<Item>
+            items = new List<Character>();
+            var mockItems = new List<Character>
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." },
+                new Character(0, "Jerry", CharacterStatus.Alive),
+                new Character(0, "Beth", CharacterStatus.Alive),
+                new Character(0, "Morty", CharacterStatus.Alive),
+                new Character(0, "Rick", CharacterStatus.Alive),
+                new Character(0, "Mr President", CharacterStatus.Alive),
+                new Character(0, "Mr Poophole", CharacterStatus.Alive),
+                new Character(0, "Cop Morty", CharacterStatus.Dead)
             };
 
             foreach (var item in mockItems)
@@ -31,38 +31,14 @@ namespace DemoUITest.Services
             }
         }
 
-        public async Task<bool> AddItemAsync(Item item)
-        {
-            items.Add(item);
-
-            return await Task.FromResult(true);
-        }
-
-        public async Task<bool> UpdateItemAsync(Item item)
-        {
-            var _item = items.Where((Item arg) => arg.Id == item.Id).FirstOrDefault();
-            items.Remove(_item);
-            items.Add(item);
-
-            return await Task.FromResult(true);
-        }
-
-        public async Task<bool> DeleteItemAsync(string id)
-        {
-            var _item = items.Where((Item arg) => arg.Id == id).FirstOrDefault();
-            items.Remove(_item);
-
-            return await Task.FromResult(true);
-        }
-
-        public async Task<Item> GetItemAsync(string id)
-        {
-            return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
-        }
-
-        public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
+        public async Task<IEnumerable<Character>> GetItemsAsync(bool forceRefresh, CancellationToken token)
         {
             return await Task.FromResult(items);
+        }
+
+        public Task<Character> GetItemAsync(int id, CancellationToken token)
+        {
+            return Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
     }
 }

@@ -123,6 +123,12 @@
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\bravent_negro.imageset\bravent_negro%402x.png" />
+    <ImageAsset Include="Assets.xcassets\bravent_negro.imageset\bravent_negro%403x.png" />
+    <ImageAsset Include="Assets.xcassets\bravent_negro.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\bravent_gris_s.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\bravent_gris_s.imageset\bravent_gris_s%402x.png" />
+    <ImageAsset Include="Assets.xcassets\bravent_gris_s.imageset\bravent_gris_s%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -131,8 +137,11 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
+    <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
     <PackageReference Include="Xamarin.TestCloud.Agent" Version="0.21.4" />
+    <PackageReference Include="LiveXAML">
+      <Version>2.1.45</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -140,5 +149,9 @@
       <Project>{21DF1593-660C-4032-AE71-51237ADC4D4F}</Project>
       <Name>DemoUITest</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\bravent_negro.imageset\" />
+    <Folder Include="Assets.xcassets\bravent_gris_s.imageset\" />
   </ItemGroup>
 </Project>

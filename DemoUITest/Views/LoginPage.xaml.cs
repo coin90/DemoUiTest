@@ -18,10 +18,9 @@ namespace DemoUITest.Views
             BindingContext = viewModel = new LoginViewModel(Navigation);
         }
 
-        async void Login_Clicked(object sender, EventArgs e)
+        void Login_Clicked(object sender, EventArgs e)
         {               
             viewModel.LoginCommand.Execute(null);
-            Navigation.PushAsync(new MainPage());
         }
     }
 

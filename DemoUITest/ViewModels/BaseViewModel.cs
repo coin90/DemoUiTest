@@ -2,18 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-
-using Xamarin.Forms;
-
-using DemoUITest.Models;
-using DemoUITest.Services;
+using System.Threading;
 
 namespace DemoUITest.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>() ?? new MockDataStore();
-
         bool isBusy = false;
         public bool IsBusy
         {
@@ -26,6 +20,13 @@ namespace DemoUITest.ViewModels
         {
             get { return title; }
             set { SetProperty(ref title, value); }
+        }
+
+        protected readonly CancellationTokenSource _dataCTS;
+
+        public BaseViewModel()
+        {
+            _dataCTS = new CancellationTokenSource();
         }
 
         protected bool SetProperty<T>(ref T backingStore, T value,

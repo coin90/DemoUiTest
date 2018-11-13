@@ -2,31 +2,26 @@
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
-
+using DemoUITest.Services;
 using DemoUITest.Models;
-using DemoUITest.Views;
 
 namespace DemoUITest.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
-        public ObservableCollection<Item> Items { get; set; }
+        public ObservableCollection<Character> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
+
+        readonly IDataStore<Character> _charactersDS;
 
         public ItemsViewModel()
         {
             Title = "Browse";
-            Items = new ObservableCollection<Item>();
+            Items = new ObservableCollection<Character>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
-            {
-                var _item = item as Item;
-                Items.Add(_item);
-                await DataStore.AddItemAsync(_item);
-            });
+            _charactersDS = DependencyService.Get<IDataStore<Character>>();
         }
 
         async Task ExecuteLoadItemsCommand()
@@ -39,7 +34,7 @@ namespace DemoUITest.ViewModels
             try
             {
                 Items.Clear();
-                var items = await DataStore.GetItemsAsync(true);
+                var items = await _charactersDS.GetItemsAsync(true, _dataCTS.Token);
                 foreach (var item in items)
                 {
                     Items.Add(item);

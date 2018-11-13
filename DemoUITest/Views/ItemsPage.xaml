@@ -1,24 +1,64 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DemoUITest.Views.ItemsPage" Title="{Binding Title}" x:Name="BrowseItemsPage">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="AddItem_Clicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="UWP" Value="add.png" />
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
-    </ContentPage.ToolbarItems>
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DemoUITest.Views.ItemsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:DemoUITest.ViewModels;assembly=DemoUITest"
+    x:Name="BrowseItemsPage"
+    Title="{Binding Title}"
+    d:DataContext="{d:DesignInstance viewModels:ItemsViewModel}"
+    BackgroundColor="{StaticResource Gray}"
+    NavigationPage.HasNavigationBar="false"
+    mc:Ignorable="d">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="ItemsListView" ItemsSource="{Binding Items}" VerticalOptions="FillAndExpand" HasUnevenRows="true" RefreshCommand="{Binding LoadItemsCommand}" IsPullToRefreshEnabled="true" IsRefreshing="{Binding IsBusy, Mode=OneWay}" CachingStrategy="RecycleElement" ItemSelected="OnItemSelected">
+            <ListView
+                x:Name="ItemsListView"
+                Margin="0,5,0,0"
+                VerticalOptions="FillAndExpand"
+                CachingStrategy="RecycleElement"
+                SeparatorVisibility="None"
+                HasUnevenRows="true"
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsBusy,
+                                       Mode=OneWay}"
+                ItemSelected="OnItemSelected"
+                ItemsSource="{Binding Items}"
+                RefreshCommand="{Binding LoadItemsCommand}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Padding="10">
-                                <Label Text="{Binding Text}" LineBreakMode="NoWrap" Style="{DynamicResource ListItemTextStyle}" FontSize="16" />
-                                <Label Text="{Binding Description}" LineBreakMode="NoWrap" Style="{DynamicResource ListItemDetailTextStyle}" FontSize="13" />
-                            </StackLayout>
+                            <Frame
+                                Margin="10,2"
+                                BackgroundColor="{StaticResource Black}"
+                                HasShadow="false"
+                                Padding="2">
+                                <StackLayout Orientation="Horizontal">
+                                    <ff:CachedImage Source="{Binding Image}" />
+                                    <StackLayout
+                                        Orientation="Vertical"
+                                        Spacing="0">
+                                        <Label
+                                            FontAttributes="Bold"
+                                            FontSize="20"
+                                            LineBreakMode="NoWrap"
+                                            Text="{Binding Name}"
+                                            TextColor="White" />
+                                        <Label
+                                            FontSize="12"
+                                            LineBreakMode="NoWrap"
+                                            FontAttributes="Bold"
+                                            TextColor="White"
+                                            Text="{Binding Species}" />
+                                    </StackLayout>
+
+
+                                </StackLayout>
+                            </Frame>
+
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>

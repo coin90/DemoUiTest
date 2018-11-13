@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
-using DemoUITest.Models;
-using DemoUITest.Views;
 using DemoUITest.ViewModels;
+using DemoUITest.Models;
 
 namespace DemoUITest.Views
 {
@@ -27,7 +20,7 @@ namespace DemoUITest.Views
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var item = args.SelectedItem as Item;
+            var item = args.SelectedItem as Character;
             if (item == null)
                 return;
 
@@ -37,9 +30,9 @@ namespace DemoUITest.Views
             ItemsListView.SelectedItem = null;
         }
 
-        async void AddItem_Clicked(object sender, EventArgs e)
+        void AddItem_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
+
         }
 
         protected override void OnAppearing()

@@ -31,10 +31,11 @@ namespace DemoUITest.ViewModels
 
             try
             {
-                if (User.Equals("user") && Pass.Equals("1234"))
+                if (!string.IsNullOrEmpty(User) &&
+                    !string.IsNullOrEmpty(Pass))
                 {
-                    
-                    await _navigation.PushAsync(new MainPage());
+                    //TODO: do something async
+                    Application.Current.MainPage = new MainPage();
                 }
             }
             catch (Exception ex)
