@@ -70,6 +70,17 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
+    <None Include="APK\com.test.DemoUITest.apk" />
+    <None Include="APK\Xamarin.UITest.2.2.7\lib\tools\test-cloud.exe" />
+    <None Include="APK\Xamarin.UITest.2.2.7\tools\test-cloud.exe" />
+    <None Include="APK\Xamarin.UITest.2.2.7\.signature.p7s" />
+    <None Include="APK\Xamarin.UITest.2.2.7\ThirdPartyNotices.txt" />
+    <None Include="APK\Xamarin.UITest.2.2.7\Xamarin.UITest-License.rtf" />
+    <None Include="APK\Xamarin.UITest.2.2.7\Xamarin.UITest.2.2.7.nupkg" />
+    <None Include="APK\Xamarin.UITest.2.2.7\lib\net45\Xamarin.UITest.dll" />
+    <None Include="APK\Xamarin.UITest.2.2.7\lib\net45\Xamarin.UITest.xml" />
+    <None Include="APK\Xamarin.UITest.2.2.7\lib\portable-net45+win8+wp8\Xamarin.UITest.dll" />
+    <None Include="APK\Xamarin.UITest.2.2.7\lib\portable-net45+win8+wp8\Xamarin.UITest.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
@@ -104,6 +115,7 @@
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
+    <Folder Include="APK\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DemoUITest\DemoUITest.csproj">
