@@ -8,3 +8,4 @@
 /Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/obj/Release/netstandard2.0/DemoUITest.AssemblyInfo.cs
 /Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/obj/Release/netstandard2.0/DemoUITest.dll
 /Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/obj/Release/netstandard2.0/DemoUITest.pdb
+/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/obj/Release/netstandard2.0/DemoUITest.csprojResolveAssemblyReference.cache

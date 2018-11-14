@@ -9,3 +9,14 @@
 /Users/jccoin/Documents/UITest/DemoUITest/DemoUITest/obj/Debug/netstandard2.0/DemoUITest.AssemblyInfo.cs
 /Users/jccoin/Documents/UITest/DemoUITest/DemoUITest/obj/Debug/netstandard2.0/DemoUITest.dll
 /Users/jccoin/Documents/UITest/DemoUITest/DemoUITest/obj/Debug/netstandard2.0/DemoUITest.pdb
+/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/bin/Debug/netstandard2.0/DemoUITest.deps.json
+/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/bin/Debug/netstandard2.0/DemoUITest.dll
+/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/bin/Debug/netstandard2.0/DemoUITest.pdb
+/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/bin/Debug/netstandard2.0/Mono.Android.dll
+/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/bin/Debug/netstandard2.0/Mono.Android.pdb
+/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/obj/Debug/netstandard2.0/DemoUITest.csprojResolveAssemblyReference.cache
+/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/obj/Debug/netstandard2.0/DemoUITest.csproj.CoreCompileInputs.cache
+/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/obj/Debug/netstandard2.0/DemoUITest.AssemblyInfoInputs.cache
+/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/obj/Debug/netstandard2.0/DemoUITest.AssemblyInfo.cs
+/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/obj/Debug/netstandard2.0/DemoUITest.dll
+/Users/jccoin/Documents/GitHub/DemoUiTest/DemoUITest/obj/Debug/netstandard2.0/DemoUITest.pdb
