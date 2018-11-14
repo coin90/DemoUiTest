@@ -6,7 +6,8 @@
     xmlns:vm="clr-namespace:DemoUITest.ViewModels"
     Title="{Binding Title}"
     BackgroundColor="{StaticResource Gray}"
-    NavigationPage.HasNavigationBar="false">
+    NavigationPage.HasNavigationBar="false"
+    AutomationId="AboutPage">
     <ScrollView Grid.Row="1">
         <StackLayout
             Orientation="Vertical"
@@ -68,7 +69,8 @@
                 BackgroundColor="{StaticResource Granate}"
                 Command="{Binding OpenWebCommand}"
                 Text="Learn more"
-                TextColor="{StaticResource Black}" />
+                TextColor="{StaticResource Black}"
+                AutomationId="OpenWebView"/>
         </StackLayout>
     </ScrollView>
 

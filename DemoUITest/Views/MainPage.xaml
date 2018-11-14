@@ -15,7 +15,7 @@
                  <views:ItemsPage />
             </x:Arguments>
         </NavigationPage>
-        <NavigationPage Title="About" Icon="bravent_gris_s">
+        <NavigationPage Title="About" Icon="bravent_gris_s" AutomationId="TabAbout">
             <x:Arguments>
                 <views:AboutPage Title="About" />
             </x:Arguments>
