@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using Android.Content.Res;
 using DemoUITest.Views;
 using Xamarin.Forms;
 
