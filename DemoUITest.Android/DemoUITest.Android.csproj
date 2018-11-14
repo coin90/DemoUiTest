@@ -109,6 +109,11 @@
     <AndroidResource Include="Resources\drawable-xhdpi\bravent_gris_s.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\bravent_gris_s.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\bravent_gris_s.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
