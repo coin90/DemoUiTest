@@ -12,7 +12,7 @@
     <TabbedPage.Children>
         <NavigationPage Title="Personajes" BarBackgroundColor="{StaticResource Black}">
             <x:Arguments>
-                <views:ItemsPage />
+                 <views:ItemsPage />
             </x:Arguments>
         </NavigationPage>
         <NavigationPage Title="About" Icon="bravent_gris_s">
