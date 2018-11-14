@@ -37,7 +37,7 @@
                                 HasShadow="false"
                                 Padding="2">
                                 <StackLayout Orientation="Horizontal">
-                                    <ff:CachedImage Source="{Binding Image}" />
+                                    <ff:CachedImage Source="{Binding Image}" WidthRequest="120" HeightRequest="120" />
                                     <StackLayout
                                         Orientation="Vertical"
                                         Spacing="0">
