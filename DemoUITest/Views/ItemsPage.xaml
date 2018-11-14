@@ -12,11 +12,13 @@
     d:DataContext="{d:DesignInstance viewModels:ItemsViewModel}"
     BackgroundColor="{StaticResource Gray}"
     NavigationPage.HasNavigationBar="false"
+    AutomationId="ItemsPage"
     mc:Ignorable="d">
     <ContentPage.Content>
         <StackLayout>
             <ListView
                 x:Name="ItemsListView"
+                AutomationId="ItemsListView"
                 Margin="0,5,0,0"
                 VerticalOptions="FillAndExpand"
                 CachingStrategy="RecycleElement"

@@ -17,8 +17,7 @@ namespace DemoUITest.UITests
         protected bool OniOS;
         protected bool OnTablet;
 
-        protected ItemsPage ItemsPage;
-        protected NewItemPage NewItemPage;
+        //protected ItemsPage ItemsPage;
 
         string email = "email";
         string password = "pass";
@@ -58,8 +57,7 @@ namespace DemoUITest.UITests
 
             Login();
 
-            ItemsPage = new ItemsPage(app, platform);
-            NewItemPage = new NewItemPage(app, platform);
+            //ItemsPage = new ItemsPage(app, platform);
         }
 
         private void Login()

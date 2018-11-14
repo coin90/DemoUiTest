@@ -51,11 +51,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Tests/BaseTest.cs" />
-    <Compile Include="Tests/MockDataTests.cs" />
     <Compile Include="Pages/BasePage.cs" />
     <Compile Include="Pages/ItemsPage.cs" />
-    <Compile Include="Pages/NewItemPage.cs" />
     <Compile Include="AppInitializer.cs" />
+    <Compile Include="Tests\ItemDetailTest.cs" />
+    <Compile Include="Pages\ItemDetailPage.cs" />
+    <Compile Include="Tests\ItemsTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
