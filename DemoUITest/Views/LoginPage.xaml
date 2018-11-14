@@ -18,6 +18,7 @@
                         Text="User"
                         TextColor="{StaticResource Black}" />
                     <Entry
+                        AutomationId="user"
                         FontSize="Small"
                         Text="{Binding User}"
                         BackgroundColor="White"/>
@@ -27,6 +28,7 @@
                         Text="Pass"
                         TextColor="{StaticResource Black}" />
                     <Entry
+                        AutomationId="pass"
                         Margin="0"
                         FontSize="Small"
                         IsPassword="true"
