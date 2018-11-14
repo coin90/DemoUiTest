@@ -142,6 +142,9 @@
     <PackageReference Include="LiveXAML">
       <Version>2.1.45</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading">
+      <Version>2.4.3.840</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
