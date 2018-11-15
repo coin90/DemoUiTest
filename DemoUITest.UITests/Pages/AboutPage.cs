@@ -1,5 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
+using Xamarin.UITest;
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
 
@@ -10,8 +11,9 @@ namespace DemoUITest.UITests.Pages
         string AboutPageId = "AboutPage";
         string TabAbout = "TabAbout";
         string ButtonOpenWebView = "OpenWebView";
+        string ButtonException = "Exception";
 
-        public AboutPage() : base()
+        public AboutPage(IApp app, Platform platform) : base(app, platform)
         {
         }
 
@@ -25,7 +27,12 @@ namespace DemoUITest.UITests.Pages
 
         public AboutPage NavigateToAbout()
         {
-            app.Tap(TabAbout);
+            if (OniOS)
+                app.Tap(TabAbout);
+
+            if (OnAndroid)
+                app.Tap(x => x.Text("About"));
+            
             return this;
         }
 
@@ -33,6 +40,14 @@ namespace DemoUITest.UITests.Pages
         {
             app.ScrollDown();
             app.Tap(ButtonOpenWebView);
+
+            return this;
+        }
+
+        public AboutPage OpenException()
+        {
+            app.ScrollDown();
+            app.Tap(ButtonException);
 
             return this;
         }

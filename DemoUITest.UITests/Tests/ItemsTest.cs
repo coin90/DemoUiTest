@@ -13,7 +13,7 @@ namespace DemoUITest.UITests.Tests
         [Test]
         public void GetItems()
         {
-            var itemsPage = new ItemsPage();
+            var itemsPage = new ItemsPage(app, platform);
 
             itemsPage.CheckLoadView();
             app.Screenshot("Items page loaded");

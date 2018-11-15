@@ -39,25 +39,23 @@ namespace DemoUITest.UITests
             OnAndroid = app.GetType() == typeof(AndroidApp);
             OniOS = app.GetType() == typeof(iOSApp);
 
-            if (OniOS)
-            {
-                var iOSApp = app as iOSApp;
-                if (iOSApp.Device.IsPhone)
-                    OnTablet = false;
-                else
-                    OnTablet = true;
-            }
-            else
-            {
-                var idiom = app.Invoke("BackdoorGetIdiom");
-                OnTablet = !idiom.Equals("Phone");
-            }
+            //if (OniOS)
+            //{
+            //    var iOSApp = app as iOSApp;
+            //    if (iOSApp.Device.IsPhone)
+            //        OnTablet = false;
+            //    else
+            //        OnTablet = true;
+            //}
+            //else
+            //{
+            //    var idiom = app.Invoke("BackdoorGetIdiom");
+            //    OnTablet = !idiom.Equals("Phone");
+            //}
 
             app.Screenshot("App Initialized");
 
             Login();
-
-            //ItemsPage = new ItemsPage(app, platform);
         }
 
         private void Login()

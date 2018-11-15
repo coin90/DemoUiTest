@@ -15,11 +15,11 @@ namespace DemoUITest.UITests.Tests
         public void DetailItem()
         {
 
-            var itemsPage = new ItemsPage();
+            var itemsPage = new ItemsPage(app, platform);
 
             itemsPage.SelectFirstCellByAutomationId();
 
-            new ItemDetailPage()
+            new ItemDetailPage(app, platform)
                 .CheckLoadView();
         }
     }

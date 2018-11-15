@@ -66,11 +66,18 @@
             <BoxView VerticalOptions="FillAndExpand" />
             <Button
                 Margin="0,10,0,0"
-                BackgroundColor="{StaticResource Granate}"
+                BackgroundColor="Red"
                 Command="{Binding OpenWebCommand}"
                 Text="Learn more"
                 TextColor="{StaticResource Black}"
                 AutomationId="OpenWebView"/>
+              <Button
+                Margin="0,10,0,0"
+                BackgroundColor="Red"
+                Command="{Binding ExceptionCommand}"
+                Text="Exception"
+                TextColor="{StaticResource Black}"
+                AutomationId="Exception"/>
         </StackLayout>
     </ScrollView>
 

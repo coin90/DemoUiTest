@@ -14,7 +14,7 @@ namespace DemoUITest.UITests.Tests
         [Test]
         public void LoadAbout()
         {
-            var aboutPage = new AboutPage();
+            var aboutPage = new AboutPage(app, platform);
 
             aboutPage.NavigateToAbout()
                      .CheckLoadView();
@@ -25,12 +25,21 @@ namespace DemoUITest.UITests.Tests
         [Test]
         public void OpenWebView()
         {
-            var aboutPage = new AboutPage();
+            var aboutPage = new AboutPage(app, platform);
 
             aboutPage.NavigateToAbout()
                      .OpenWebView();
 
             app.Screenshot("WebView page loadded");
+        }
+
+        [Test]
+        public void TestException()
+        {
+            var aboutPage = new AboutPage(app, platform);
+
+            aboutPage.NavigateToAbout()
+                     .OpenException();
         }
     }
 }
