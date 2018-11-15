@@ -18,6 +18,5 @@ namespace DemoUITest.UITests
             OnAndroid = platform == Platform.Android;
             OniOS = platform == Platform.iOS;
         }
-
     }
 }

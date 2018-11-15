@@ -22,5 +22,20 @@ namespace DemoUITest.UITests.Tests
             new ItemDetailPage(app, platform)
                 .CheckLoadView();
         }
+
+        [Test]
+        public void BackDetailItem()
+        {
+
+            var itemsPage = new ItemsPage(app, platform);
+
+            itemsPage.SelectFirstCellByAutomationId();
+
+            new ItemDetailPage(app, platform)
+                .CheckLoadView()
+                .Back();
+
+            app.Screenshot("Back to items page");
+        }
     }
 }
