@@ -3,28 +3,95 @@
     x:Class="DemoUITest.Views.ItemDetailPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="{Binding Title}"
+    xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    Title="{Binding Item.Name}"
     AutomationId="ItemDetailPage"
-    NavigationPage.HasNavigationBar="true"  
-    BackgroundColor="{StaticResource Black}">
-    <StackLayout
-        Padding="15"
-        Spacing="20">
+    BackgroundColor="{StaticResource Black}"
+    NavigationPage.HasNavigationBar="true">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid IsClippedToBounds="true">
+            <ff:CachedImage
+                HorizontalOptions="FillAndExpand"
+                Aspect="AspectFill"
+                Source="{Binding Item.Image}" />
+            <Grid BackgroundColor="#a7191919" />
+            <StackLayout Padding="5">
+                <Label TextColor="White">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                FontAttributes="Bold"
+                                Text="Origen: " />
+                            <Span Text="{Binding Item.Origin.Name}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label TextColor="White">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                FontAttributes="Bold"
+                                Text="Ubicación: " />
+                            <Span Text="{Binding Item.Location.Name}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label TextColor="White">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                FontAttributes="Bold"
+                                Text="Especie: " />
+                            <Span Text="{Binding Item.Species}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label TextColor="White">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                FontAttributes="Bold"
+                                Text="Género: " />
+                            <Span Text="{Binding Item.Gender}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            <Label
+                Margin="5"
+                HorizontalOptions="End"
+                VerticalOptions="End"
+                BackgroundColor="{StaticResource Granate}"
+                FontAttributes="Bold"
+                FontSize="Small"
+                Text="{Binding Item.Status}"
+                TextColor="White" />
+
+
+        </Grid>
         <Label
-            FontSize="Medium"
-            TextColor="White"
-            Text="Text:" />
-        <Label
-            FontSize="Small"
-            TextColor="White"
-            Text="{Binding Item.Text}" />
-        <Label
-            FontSize="Medium"
-            TextColor="White"
-            Text="Description:" />
-        <Label
-            FontSize="Small"
-            TextColor="White"
-            Text="{Binding Item.Description}" />
-    </StackLayout>
+            Grid.Row="1"
+            FontAttributes="Bold"
+            Text="Episodios"
+            TextColor="White" />
+        <ListView
+            Grid.Row="2"
+            Margin="0,5,0,0"
+            VerticalOptions="FillAndExpand"
+            AutomationId="ItemsListView"
+            CachingStrategy="RecycleElement"
+            ItemsSource="{Binding Item.Episode}"
+            SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding .}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
 </ContentPage>

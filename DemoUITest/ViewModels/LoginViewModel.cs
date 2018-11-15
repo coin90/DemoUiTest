@@ -20,14 +20,11 @@ namespace DemoUITest.ViewModels
             Pass = User = string.Empty;
         }
 
-
         async Task ExecuteLoginCommand()
         {
             if (IsBusy)
-                return;
-            
+                return;             
             IsBusy = true;
-
             try
             {
                 if (!string.IsNullOrEmpty(User) &&
