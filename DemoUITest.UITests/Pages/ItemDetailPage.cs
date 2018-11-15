@@ -1,5 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
+using Xamarin.UITest;
 
 namespace DemoUITest.UITests.Pages
 {
@@ -7,7 +8,7 @@ namespace DemoUITest.UITests.Pages
     {
         readonly string ItemDetailPageId = "ItemDetailPage";
 
-        public ItemDetailPage() : base()
+        public ItemDetailPage(IApp app, Platform platform) : base(app, platform)
         {
         }
 

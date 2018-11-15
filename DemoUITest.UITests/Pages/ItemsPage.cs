@@ -11,17 +11,12 @@ namespace DemoUITest.UITests
         readonly Query _addToolbarButton;
         string ItemsPageId = "ItemsPage";
 
-        public ItemsPage(IApp app, Platform platform) : base(app, platform, "Browse")
+        public ItemsPage(IApp app, Platform platform) : base(app, platform)
         {
             if (OniOS)
                 _addToolbarButton = x => x.Class("UIButtonLabel").Index(0);
             else
                 _addToolbarButton = x => x.Class("android.support.v7.view.menu.ActionMenuItemView").Index(0);
-        }
-
-        public ItemsPage() : base()
-        {
-
         }
 
         public ItemsPage CheckLoadView()

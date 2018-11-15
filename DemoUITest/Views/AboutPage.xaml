@@ -6,7 +6,8 @@
     xmlns:vm="clr-namespace:DemoUITest.ViewModels"
     Title="{Binding Title}"
     BackgroundColor="{StaticResource Gray}"
-    NavigationPage.HasNavigationBar="false">
+    NavigationPage.HasNavigationBar="false"
+    AutomationId="AboutPage">
     <ScrollView Grid.Row="1">
         <StackLayout
             Orientation="Vertical"
@@ -65,10 +66,18 @@
             <BoxView VerticalOptions="FillAndExpand" />
             <Button
                 Margin="0,10,0,0"
-                BackgroundColor="{StaticResource Granate}"
+                BackgroundColor="Red"
                 Command="{Binding OpenWebCommand}"
                 Text="Learn more"
-                TextColor="{StaticResource Black}" />
+                TextColor="{StaticResource Black}"
+                AutomationId="OpenWebView"/>
+              <Button
+                Margin="0,10,0,0"
+                BackgroundColor="Red"
+                Command="{Binding ExceptionCommand}"
+                Text="Exception"
+                TextColor="{StaticResource Black}"
+                AutomationId="Exception"/>
         </StackLayout>
     </ScrollView>
 
